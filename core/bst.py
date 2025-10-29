@@ -2,6 +2,9 @@ from typing import Optional, List
 from models.vehicle import Vehicle
 from core.bst_node import BSTNode
 
+class Motorcycle:
+    pass
+
 
 class BinarySearchTree:
     """
