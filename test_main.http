@@ -1,0 +1,98 @@
+# Vehicle BST API Tests
+
+### Root endpoint
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+### Create vehicle 1
+POST http://127.0.0.1:8000/api/vehicles/
+Content-Type: application/json
+
+{
+  "plate": "ABC-123",
+  "brand": "Toyota",
+  "color": "Red",
+  "model": "Corolla",
+  "price": 25000.00
+}
+
+###
+
+### Create vehicle 2
+POST http://127.0.0.1:8000/api/vehicles/
+Content-Type: application/json
+
+{
+  "plate": "XYZ-789",
+  "brand": "Honda",
+  "color": "Blue",
+  "model": "Civic",
+  "price": 28000.00
+}
+
+###
+
+### Create vehicle 3
+POST http://127.0.0.1:8000/api/vehicles/
+Content-Type: application/json
+
+{
+  "plate": "DEF-456",
+  "brand": "Ford",
+  "color": "Black",
+  "model": "Focus",
+  "price": 22000.00
+}
+
+###
+
+### Get all vehicles (inorder)
+GET http://127.0.0.1:8000/api/vehicles/
+Accept: application/json
+
+###
+
+### Get vehicle by plate
+GET http://127.0.0.1:8000/api/vehicles/ABC-123
+Accept: application/json
+
+###
+
+### Update vehicle
+PUT http://127.0.0.1:8000/api/vehicles/ABC-123
+Content-Type: application/json
+
+{
+  "plate": "ABC-123",
+  "brand": "Toyota",
+  "color": "White",
+  "model": "Corolla",
+  "price": 26000.00
+}
+
+###
+
+### Get inorder traversal
+GET http://127.0.0.1:8000/api/vehicles/traversal/inorder
+Accept: application/json
+
+###
+
+### Get preorder traversal
+GET http://127.0.0.1:8000/api/vehicles/traversal/preorder
+Accept: application/json
+
+###
+
+### Get postorder traversal
+GET http://127.0.0.1:8000/api/vehicles/traversal/postorder
+Accept: application/json
+
+###
+
+### Delete vehicle
+DELETE http://127.0.0.1:8000/api/vehicles/DEF-456
+
+###
